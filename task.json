@@ -1,0 +1,32 @@
+{
+  "tasks": [
+    {
+      "id": "A",
+      "name": "Fetch Data",
+      "priority": 1,
+      "depends_on": [],
+      "duration_ms": 2000
+    },
+    {
+      "id": "B",
+      "name": "Process Data",
+      "priority": 2,
+      "depends_on": ["A"],
+      "duration_ms": 1500
+    },
+    {
+      "id": "C",
+      "name": "Generate Report",
+      "priority": 1,
+      "depends_on": ["A"],
+      "duration_ms": 1000
+    },
+    {
+      "id": "D",
+      "name": "Send Email",
+      "priority": 3,
+      "depends_on": ["B","C"],
+      "duration_ms": 500
+    }
+  ]
+}
